@@ -2181,10 +2181,6 @@ export function TranslationForm({ series, onTranslate }: TranslationFormProps) {
         })()}
         chapterMemory={chapterMemory}
         onComplete={handleConsolidatedReviewComplete}
-        showRetry={true}
-        onRetry={() => {
-          setHasFailed(false);
-          processTranslationWithRetry(0);
         }}
       />
     </div>
