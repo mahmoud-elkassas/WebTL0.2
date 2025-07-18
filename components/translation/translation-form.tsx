@@ -2181,7 +2181,6 @@ export function TranslationForm({ series, onTranslate }: TranslationFormProps) {
         })()}
         chapterMemory={chapterMemory}
         onComplete={handleConsolidatedReviewComplete}
-        }}
       />
     </div>
   );
