@@ -28,7 +28,11 @@ export async function GET(request: Request) {
       // Use database-managed API keys with load balancing
       let apiKey: string;
       try {
-        apiKey = await apiKeyManager.getNextGoogleKey();
+        const key = await apiKeyManager.getNextGoogleKey();
+        if (!key) {
+          throw new Error("No Google API key available");
+        }
+        apiKey = key;
       } catch (error) {
         console.error("Failed to get Google API key:", error);
         return NextResponse.json(
