@@ -11,7 +11,7 @@ import {
   clearAccessToken,
   getAccessToken,
 } from "@/utils/google-drive-helper";
-import { isWindowClosed, safeCloseWindow } from "@/lib/coop-handler";
+
 
 declare global {
   interface Window {
